@@ -1,5 +1,7 @@
 <?php
 
+include 'dbinfo.php';
+
 session_start();
 
 /*if(!isset($_SESSION['username']))
@@ -53,9 +55,9 @@ $username = $_SESSION['username'];
             <br>
             
             <h3>Tasks</h3>
-            <?php	$con = mysqli_connect('localhost','root','admin');
+            <?php	$con = mysqli_connect($dbip,$dbuser,$dbpass);
 				if(!$con)	{		echo 'Not Connected To Server';	}		
-				if(!mysqli_select_db($con,'basictasks'))	
+				if(!mysqli_select_db($con,$dbname))	
 				{		
 					echo 'Database Not Selected';	
 					}		

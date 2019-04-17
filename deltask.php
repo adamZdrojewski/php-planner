@@ -1,12 +1,14 @@
 <?php
 
+include 'dbinfo.php';
+
 session_start();
 
 $username = $_SESSION['username'];
 
-$con = mysqli_connect('localhost', 'root', 'admin');
+$con = mysqli_connect($dbip, $dbuser, $dbpass);
 
-mysqli_select_db($con, 'basictasks');
+mysqli_select_db($con, $dbname);
 
 $name = $_POST['name'];
 

@@ -37,19 +37,6 @@ $username = $_SESSION['username'];
         <div class="container center aligned">
             <br>
             <br>
-            <div class="row">
-                <form method="POST" action="addtask.php">
-                    <div class="input-field col s10">
-                        <input id="newtask" type="text" class="validate" name="newtask">
-                        <label for="newtask">New Task</label>
-                    </div>
-                    <button class="btn-floating btn-large waves-effect waves-light green" type="submit" name="action"><i class="material-icons">add</i>
-                    </button>
-                </form>
-            </div>
-            
-            <br>
-            <br>
             
             <h3>Are You Sure That You Would Like To Delete Your Account</h3>
             <h4>THIS CAN NOT BE UNDONE</h4>

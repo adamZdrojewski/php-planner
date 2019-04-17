@@ -1,5 +1,19 @@
 <?php
 
+include 'dbinfo.php';
+
+$con = mysqli_connect($dbip, $dbuser, $dbpass);
+mysqli_select_db($con, $dbname);
+
+$s = "
+CREATE TABLE IF NOT EXISTS users (
+	username varchar(50),
+        password varchar(50)
+);
+";
+
+mysqli_query($con, $s);
+
 session_start();
 
 ?>
